@@ -1,0 +1,50 @@
+// @import "../../../styles.scss";
+$golden: #c59d5f;
+
+
+    // height: 8rem;
+    nav {
+        li {
+            list-style-type: none;
+            // margin-inline: 3rem;
+            color: $golden;
+            padding: 0.1rem 0.8rem;
+
+            &:hover {
+                color: #fff;
+                background-color: $golden;
+                transition: 0.4s ease-in-out;
+                cursor: pointer;
+                border-radius: 0.2rem;
+
+                display: inline-block;
+            }
+        }
+    }
+
+
+.header {
+    display: grid;
+    place-items: center;
+}
+
+.heading {
+    position: relative;
+    letter-spacing: 0.1rem;
+    margin-top: 5rem;
+    font-weight: bolder;
+    display: inline-block;
+    min-width: 200px;
+
+    &::before {
+        content: "";
+        height: 0.25rem;
+        width: 9rem;
+        background-color: $golden;
+        //positioning
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -4.5rem;
+    }
+}

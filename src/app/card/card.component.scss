@@ -1,0 +1,59 @@
+// .card {
+//   height: 300px;
+//   width: 500px;
+// }
+// .pic {
+//   grid-area: pic;
+// }
+// .info {
+//   grid-area: area;
+// }
+// .card {
+//   display: grid;
+//   grid-template: "pic area area";
+// }
+@import "../../styles.scss";
+
+.customCard {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+figure {
+  width: 100%;
+  border-radius: 5px;
+  outline: 5px solid $golden;
+  outline-offset: 0px;
+  img {
+    width: 100%;
+    object-fit:cover;
+    height: 150px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted black;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  .price {
+    color: $golden;
+    font-weight: bold;
+  }
+  .name {
+    font-weight: bold;
+    font-family: $font-family;
+  }
+}
+.desc {
+  padding-top: 20px;
+}
