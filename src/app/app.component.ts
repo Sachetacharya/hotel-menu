@@ -11,12 +11,13 @@ export class AppComponent {
   information: Menu[] = [];
   dataToDisplay: Menu[] = [];
 
-  constructor(private dataservice: DataFetchService) {}
+  constructor(private dataService: DataFetchService) { }
 
   initData() {
-    this.dataservice.dataFetch().subscribe((value) => {
+    this.dataService.dataFetch().subscribe((value) => {
       this.information = value;
       this.dataToDisplay = value;
+      console.log(value)
     });
   }
   allData() {
@@ -30,4 +31,5 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.initData();
-  }}
+  }
+}
